@@ -1,0 +1,1020 @@
+/* 实现rem适配 */
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 42.66px !important;
+    }
+}
+
+@media screen and (min-width:1920px) {
+    html {
+        font-size: 80px !important;
+    }
+}
+
+/* 字体图标 */
+.icon {
+    overflow: hidden;
+
+    width: 1em;
+    height: 1em;
+
+    vertical-align: -.15em;
+
+    fill: currentColor;
+}
+
+/* 清除元素的默认内外边距 */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* 所有斜体不倾斜 */
+em,
+i {
+    font-style: normal;
+}
+
+/* 去除列表前面小点 */
+li {
+    list-style: none;
+}
+
+/* 去除图片边框 去除图片底侧空白缝隙 */
+img {
+    border: 0;
+
+    vertical-align: middle;
+}
+
+/* 按钮鼠标样式变成小手 */
+button {
+    cursor: pointer;
+}
+
+/* 去除链接下划线 */
+a {
+    text-decoration: none;
+
+    color: #666666;
+}
+
+a:hover {
+    color: #E33333;
+}
+
+body {
+    background: url(../images/bg.jpeg) no-repeat;
+    background-size: cover;
+}
+
+.viewport {
+    margin: 0 auto;
+    min-width: 1024px;
+    max-width: 1920px;
+    min-height: 780px;
+}
+
+.viewport .logo {
+    position: fixed;
+    top: 0;
+    left: 50%;
+
+    width: 2.5rem;
+    height: 1.1rem;
+
+    background: url(../images/中国疫情统计\ 800x600.png) no-repeat center;
+    background-size: cover;
+
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            transform: translateX();
+}
+
+.viewport .bd {
+    display: flex;
+
+    margin: 0 auto;
+    padding: 1.1rem .25rem 0;
+}
+
+.left-box,
+.right-box {
+    flex: 3;
+}
+
+.middle-box {
+    padding: .4rem .25rem 0;
+
+    flex: 4;
+}
+
+/* 公共面板样式 */
+.panel {
+    position: relative;
+
+    margin-bottom: .25rem;
+    border: solid transparent;
+    border-width: .625rem .8875rem .025rem .850rem;
+
+/* 边框图片路径 */
+    border-image-source: url(../images/边框.png);
+
+/* 边框图片裁剪尺寸 上右下左 不家单位*/
+    border-image-slice: 744 1721 1251 1200;
+
+/* 边框图片宽度 加单位 */
+    border-image-width: .35rem;
+
+/* 边框图片是否平铺 */
+    border-image-repeat: round;
+}
+
+.panel h3 {
+    padding-top: .125rem;
+
+    font-size: .25rem;
+    font-weight: 400;
+
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.inner {
+    position: absolute;
+    top: -.6375rem;
+    right: -.85rem;
+    bottom: 0;
+    left: -.775rem;
+
+    padding: .3rem .45rem;
+}
+
+/* 概览区域模块制作 */
+.overview {
+    height: 1.375rem;
+}
+
+.overview ul {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.overview ul h4 {
+    margin: 0 0 .1rem .06rem;
+
+    font-size: .35rem;
+    font-weight: 400;
+
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.overview ul span {
+    font-size: .2rem;
+
+    color: #4C9BFD;
+}
+
+/* 监控区域模块制作 */
+.monitor {
+    height: 6rem;
+}
+
+.monitor .inner {
+    display: flex;
+
+    padding: .3rem 0;
+
+    flex-direction: column;
+}
+
+.monitor .tabs {
+    display: flex;
+
+    margin-bottom: .225rem;
+    padding: 0 .45rem;
+}
+
+.monitor .tabs a {
+    padding: 0 .3375rem;
+
+    font-size: .225rem;
+
+    color: #1950C4;
+}
+
+.monitor .tabs a:first-child {
+    border-right: .025rem solid #00F2F1;
+    padding-left: 0;
+}
+
+.monitor .tabs a.active {
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.monitor .content {
+    display: none;
+
+    position: relative;
+
+    flex: 1;
+}
+
+.monitor .content .head {
+    display: flex;
+
+    padding: .15rem .45rem;
+
+    font-size: .175rem;
+    line-height: 1.05;
+
+    color: #68D8FE;
+    background-color: rgba(225, 225, 225, .1);
+
+    justify-content: space-between;
+}
+
+.monitor .content .marquee-view {
+    overflow: hidden;
+
+    position: absolute;
+    top: .5rem;
+    bottom: 0;
+
+    width: 100%;
+}
+
+.monitor .content .row {
+    display: flex;
+
+    position: relative;
+
+    padding: .15rem .45rem;
+
+    font-size: .15rem;
+    line-height: 1.05;
+
+    color: #61A8FF;
+
+    justify-content: space-between;
+}
+
+.monitor .row .icon-dot {
+    position: absolute;
+    top: 0;
+    left: .2rem;
+
+    opacity: 0;
+}
+
+.monitor .row:hover {
+    color: #68D8FE;
+    background-color: rgba(225, 225, 225, .1);
+}
+
+.monitor .row:hover .icon-dot {
+    opacity: 1;
+}
+
+.monitor .col:first-child {
+    width: 1.2rem;
+
+    text-align: center;
+}
+
+.monitor .col:nth-child(2) {
+    overflow: hidden;
+
+    width: 2.5rem;
+
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.monitor .col:nth-child(3) {
+    width: 1.2rem;
+
+    text-align: center;
+}
+
+/* 通过css动画滚动marquee */
+.marquee-view .marquee {
+    -webkit-animation: move 50s linear infinite normal;
+            animation: move 50s linear infinite normal;
+}
+
+@keyframes move {
+    0% {
+    }
+
+    100% {
+        -webkit-transform: translateY(-50%);
+           -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+             -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+}
+
+/* 鼠标经过marquee就停止动画 */
+.marquee-view .marquee:hover {
+    animation-play-state: paused;
+}
+
+/* 点位分布统计模块制作 */
+.point {
+    height: 4.25rem;
+}
+
+.point .chart {
+    display: flex;
+
+    margin-top: .225rem;
+
+    justify-content: space-between;
+}
+
+.point .pie {
+    margin-left: -.125rem;
+    width: 3.9rem;
+    height: 3rem;
+}
+
+.point .data {
+    display: flex;
+
+    box-sizing: border-box;
+    padding: .45rem .375rem;
+    width: 2.1rem;
+
+    background-image: url(../images/980.jpg);
+    background-size: cover;
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.point h4 {
+    margin-bottom: .15rem;
+
+    font-size: .35rem;
+
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.point span {
+    display: block;
+
+    font-size: .1rem;
+
+    color: #D4E209;
+}
+
+/* 地图区域模块制作 */
+.map {
+    display: flex;
+
+    margin-bottom: .25rem;
+    height: 7.225rem;
+
+    flex-direction: column;
+}
+
+.map h3 {
+    margin: 0;
+    border: .08rem solid #FFFFFF;
+    -webkit-border-radius: 2rem;
+       -moz-border-radius: 2rem;
+            border-radius: 2rem;
+    padding: .08rem 0;
+
+    font-size: .25rem;
+    line-height: 1;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    box-shadow: 0 0 .2rem #FFFFFF, 0 0 .2rem #FFFFFF, 0 0 2rem #BC13FE, 0 0 .8rem #BC13FE, 0 0 2.8rem #BC13FE, inset 0 0 1.3rem #BC13FE;
+
+    -webkit-animation: flicker 1.5s infinite alternate;
+            animation: flicker 1.5s infinite alternate;
+
+        -ms-border-radius: 2rem;
+         -o-border-radius: 2rem;
+}
+
+@keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow: /* 扩散白光 */
+        0 0 7px #FFFFFF,
+        0 0 10px #FFFFFF,
+        0 0 21px #FFFFFF,
+        /* 扩散绿光 */
+        0 0 42px #00FFAA,
+        0 0 82px #00FFAA,
+        0 0 92px #00FFAA,
+        0 0 102px #00FFAA,
+        0 0 151px #00FFAA;
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+.map .chart {
+    flex: 1;
+}
+
+.map .geo {
+    width: 100%;
+    height: 100%;
+}
+
+/* 用户统计模块制作 */
+.users {
+    height: 4.25rem;
+}
+
+.users .chart {
+    display: flex;
+
+    margin-top: .225rem;
+
+    justify-content: space-between;
+}
+
+.users .bar {
+    margin-left: -.125rem;
+    width: 6.25rem;
+    height: 3rem;
+}
+
+.users .data {
+    display: flex;
+
+    box-sizing: border-box;
+    padding: .45rem .375rem;
+    width: 2.1rem;
+
+    background-image: url(../images/970.jpg);
+    background-size: cover;
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.users h4 {
+    margin-bottom: .15rem;
+
+    font-size: .35rem;
+
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.users span {
+    display: block;
+
+    font-size: .1rem;
+
+    color: #F58220;
+}
+
+/* 订单区域模块制作 */
+.order {
+    height: 1.875rem;
+}
+
+.order .filter {
+    display: flex;
+
+    padding-top: .04rem;
+}
+
+.order .filter a {
+    display: block;
+
+    border-right: .025rem solid #00F2F1;
+    padding: 0 .225rem;
+    height: .225rem;
+
+    font-size: .225rem;
+    line-height: 1;
+
+    color: #1950C4;
+}
+
+.order .filter a:first-child {
+    padding-left: 0;
+}
+
+.order .filter a:last-child {
+    border-right: none;
+}
+
+.order .filter a.active {
+    font-size: .25rem;
+
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.order .data {
+    display: flex;
+
+    margin-top: .25rem;
+}
+
+.order .item {
+    width: 50%;
+}
+
+.order h4 {
+    margin-bottom: .125rem;
+
+    font-size: .35rem;
+
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.order span {
+    display: block;
+
+    font-size: .2rem;
+    font-weight: bold;
+
+    color: #4C9BFD;
+}
+
+/* 销售统计区域模块制作 */
+.sales {
+    height: 3.1rem;
+}
+
+.sales .caption {
+    display: flex;
+
+    line-height: 1;
+}
+
+.sales h3 {
+    border-right: .025rem solid #00F2F1;
+    padding-right: .225rem;
+
+    font-size: .225rem;
+}
+
+.sales a {
+    margin: .0375rem 0 0 .2625rem;
+    -webkit-border-radius: .0375rem;
+       -moz-border-radius: .0375rem;
+            border-radius: .0375rem;
+    padding: .05rem;
+
+    font-size: .2rem;
+
+    color: #0BACE6;
+
+        -ms-border-radius: .0375rem;
+         -o-border-radius: .0375rem;
+}
+
+.sales a.active {
+    color: #FFFFFF;
+    background-color: #4C9BFD;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.sales .inner {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.sales .chart {
+    position: relative;
+
+    padding-top: .1875rem;
+
+    flex: 1;
+}
+
+.sales .label {
+    position: absolute;
+    top: .225rem;
+    left: .525rem;
+
+    font-size: .175rem;
+
+    color: #4996F5;
+}
+
+.sales .line {
+    width: 100%;
+    height: 100%;
+}
+
+.sales .line div,
+.sales .line div canvas {
+    width: 100% !important;
+}
+
+/* 渠道区域&销售进度模块制作 */
+.wrap {
+    display: flex;
+}
+
+.channel,
+.quarter {
+    height: 2.9rem;
+
+    flex: 1;
+}
+
+.channel {
+    margin-right: .25rem;
+}
+
+.channel .data .radar {
+    width: 100%;
+    height: 2.1rem;
+}
+
+.channel h4 {
+    margin-bottom: .0625rem;
+
+    font-size: .4rem;
+
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.channel small {
+    font-size: 50%;
+}
+
+.channel span {
+    display: block;
+
+    font-size: .175rem;
+
+    color: #4C9BFD;
+}
+
+.quarter .inner {
+    display: flex;
+
+    margin: 0 -.075rem;
+
+    flex-direction: column;
+}
+
+.quarter .chart {
+    padding-top: .225rem;
+
+    flex: 1;
+}
+
+.quarter .box {
+    position: relative;
+}
+
+.quarter .label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    font-size: .375rem;
+
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+
+    -webkit-transform: translate(-50%, -30%);
+       -moz-transform: translate(-50%, -30%);
+        -ms-transform: translate(-50%, -30%);
+         -o-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+}
+
+.quarter .label small {
+    font-size: 50%;
+}
+
+.quarter .gauge {
+    height: 1.05rem;
+}
+
+.quarter .data {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.quarter .item {
+    width: 50%;
+}
+
+.quarter h4 {
+    margin-bottom: .04rem;
+
+    font-size: .3rem;
+
+    color: #FFFFFF;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.quarter span {
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+
+    font-size: .175rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+
+    color: #4C9BFD;
+}
+
+/* 全国热销排行模块制作 */
+.top {
+    height: 3.55rem;
+}
+
+.top .inner {
+    display: flex;
+}
+
+.top .all {
+    display: flex;
+
+    width: 2rem;
+
+    font-size: .175rem;
+    vertical-align: middle;
+
+    color: #4C9BFD;
+
+    flex-direction: column;
+}
+
+.top .all ul {
+    display: flex;
+
+    margin-top: .15rem;
+
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.top .all li {
+    overflow: hidden;
+
+    padding: .23rem 0;
+
+    font-size: .27rem;
+    font-weight: 500;
+}
+
+.top .all [class^='icon'] {
+    font-size: .28rem;
+    vertical-align: middle;
+}
+
+.top .province {
+    display: flex;
+
+    color: #FFFFFF;
+
+    flex: 1;
+    flex-direction: column;
+}
+
+.top .province h3 {
+    padding-left: .325rem;
+}
+
+.top .province i {
+    float: right;
+
+    margin-top: -.1375rem;
+    padding: .15rem;
+
+    font-size: .125rem;
+    font-style: normal;
+
+    text-shadow: /* 扩散蓝光 */
+    0 0 7px #0BA3E6,
+    0 0 10px #0BA3E6,
+    0 0 21px #0BA3E6,
+    /* 扩散绿光 */
+    0 0 42px #00FFAA,
+    0 0 82px #00FFAA,
+    0 0 92px #00FFAA,
+    0 0 102px #00FFAA,
+    0 0 151px #00FFAA;
+}
+
+.top .province .data {
+    display: flex;
+}
+
+.top .province ul.sup {
+    display: flex;
+
+    font-size: .2rem;
+    font-weight: 500;
+
+    flex-direction: column;
+}
+
+.top .province ul.sup:nth-child(2) {
+    background-color: rgba(106, 90, 205, .4);
+}
+
+.top .province ul.sup li {
+    display: flex;
+
+    padding: .121rem .15rem;
+
+    justify-content: space-around;
+}
+
+.top .province ul.sup:first-child li.active {
+    background-color: rgba(106, 90, 205, .4);
+}
+
+.top .province ul.sup:nth-child(2) li {
+    margin-left: .2rem;
+    padding: .077rem .15rem;
+}
+
+.province ul.sup li span {
+    color: #4C9BFD;
+}
+
+.province .sup .icon {
+    margin-left: .125rem;
+}
+
+@media screen and (max-width:1600px) {
+    .top span {
+        -webkit-transform: scale(.9);
+           -moz-transform: scale(.9);
+            -ms-transform: scale(.9);
+             -o-transform: scale(.9);
+                transform: scale(.9);
+    }
+
+    .top .province ul.sup li {
+        padding: .121rem .4rem;
+    }
+
+    .quarter span {
+        -webkit-transform: scale(.9);
+           -moz-transform: scale(.9);
+            -ms-transform: scale(.9);
+             -o-transform: scale(.9);
+                transform: scale(.9);
+    }
+}
+
+@media screen and (max-width:720px) {
+    .top .province ul.sup:nth-child(1) li {
+        padding: .064rem .3rem;
+    }
+
+    .top .province ul.sup:nth-child(2) li {
+        padding: .022rem 0 !important;
+    }
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国疫情统计</title>
+    <meta name="description" content="2022年中国新冠疫情各省份最新统计分布表" />
+    <meta name="keywords" content="2022年,中国,疫情,新冠,统计" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/lib-flexible.js"></script>
+    <script src="font/iconfont.js"></script>
+
+</head>
+
+<body>
+    <!-- 父容器大盒子 -->
+    <div class="viewport">
+        <!-- 顶部logo -->
+        <div class="logo"></div>
+        <!-- 下面主体部分 -->
+        <div class="bd">
+            <!-- 左半区域 -->
+            <div class="left-box">
+                <!-- 概览区域模块制作 -->
+                <div class="panel overview">
+                    <div class="inner">
+                        <ul id="overview">
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- 监控区域模块制作 -->
+                <div class="panel monitor">
+                    <div class="inner">
+                        <div class="tabs">
+                            <a href="javascript:;" class="active">31省市区现有确诊病例</a>
+                            <a href="javascript:;">31省市区市新增治愈病例</a>
+                        </div>
+                        <div class="content" style="display: block;">
+                            <div class="head">
+                                <span class="col">地址</span>
+                                <span class="col">现有确诊</span>
+                                <span class="col">累计确诊</span>
+                            </div>
+                            <div class="marquee-view">
+                                <div class="marquee" id="monitorFirst">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="head">
+                                <span class="col">地址</span>
+                                <span class="col">新增确诊</span>
+                                <span class="col">治愈</span>
+                            </div>
+                            <div class="marquee-view">
+                                <div class="marquee" id="monitorTwo">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 点位分布统计模块制作 -->
+                <div class="point panel">
+                    <div class="inner">
+                        <h3>34省份现有确诊分布TOP10</h3>
+                        <div class="chart">
+                            <div class="pie"></div>
+                            <div class="data" id="point">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 中间区域 -->
+            <div class="middle-box">
+                <!-- 地图区域模块制作 -->
+                <div class="map">
+                    <h3 id="mapTitle">
+                    </h3>
+                    <div class="chart">
+                        <div class="geo"></div>
+                    </div>
+                </div>
+                <!-- 用户统计模块制作 -->
+                <div class="users panel">
+                    <div class="inner">
+                        <h3>31省份境外输入现有确诊统计</h3>
+                        <div class="chart">
+                            <div class="bar"></div>
+                            <div class="data" id="users">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右半区域 -->
+            <div class="right-box">
+                <!-- 订单区域模块制作 -->
+                <div class="order panel">
+                    <div class="inner">
+                        <!-- 筛选 -->
+                        <div class="filter">
+                            <a href="javascript:;" class="active">无症状</a>
+                            <a href="javascript:;">重症</a>
+                            <a href="javascript:;">治愈</a>
+                            <a href="javascript:;">死亡</a>
+                        </div>
+                        <!-- 数据 -->
+                        <div class="data" id="order">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 销售统计区域模块制作 -->
+                <div class="sales panel">
+                    <div class="inner">
+                        <div class="caption">
+                            <h3>疫情趋势</h3>
+                            <a href="javascript:;" class="active" data-type="local">本土</a>
+                            <a href="javascript:;" data-type="nation">全国</a>
+                            <a href="javascript:;" data-type="total">累计</a>
+                            <a href="javascript:;" data-type="rate">概率</a>
+                        </div>
+                        <div class="chart">
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 渠道区域&销售进度模块制作 -->
+                <div class="wrap">
+                    <!-- 渠道区域 -->
+                    <div class="channel panel">
+                        <div class="inner">
+                            <h3 title="北部：黑龙江、辽宁、吉林、内蒙古；
+中部：北京、天津、河北、河南、山东、湖北、山西；
+东部：江西、安徽、江苏、上海、浙江、福建、台湾；
+南部：湖南、云南、贵州、广西、广东、香港、澳门、海南；
+西部：四川、西藏、重庆、陕西、甘肃、青海、新疆、宁夏
+">地域现有确诊分布</h3>
+                            <div class="data">
+                                <div class="radar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 销售进度 -->
+                    <div class="quarter panel">
+                        <div class="inner">
+                            <h3>新冠疫苗接种追踪</h3>
+                            <div class="chart">
+                                <div class="box" title="每百人接种">
+                                    <div class="gauge"></div>
+                                    <div class="label" id="gauge" style="font-size: .2rem;font-weight: 700;"></div>
+                                </div>
+                                <div class="data" id="quarter">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 全国热销排行模块制作 -->
+                <div class="top panel">
+                    <div class="inner">
+                        <div class="all" title="港澳台现有确诊数">
+                            <h3>港澳台TOP3</h3>
+                            <ul id="gangAoTai">
+                            </ul>
+                        </div>
+                        <div class="province">
+                            <h3 title="本土省份现有确诊TOP5">热省TOP5<i class="data" title="本土市区现有确诊TOP6">☀ 热市TOP6 ☀</i></h3>
+                            <div class="data">
+                                <ul class="sup">
+
+                                </ul>
+                                <ul class="sup">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 概览区域模板 -->
+    <script type="text/html" id="overviewTpl">
+        <li title="“本土现有确诊”为31省本土正在治疗中的确诊人数。（不含港澳台、不含境外输入）">
+            <h4>{{infoTotal.localConfirm}}</h4>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-renshu1"></use>
+                </svg>
+                本土确诊
+            </span>
+        </li>
+        <li title="“现有确诊数”口径取自国家卫健委每日公布的“现有确诊病例数”，该数值反映了当前正在治疗中的确诊人数。（含港澳台）">
+            <h4>{{infoTotal.nowConfirm}}</h4>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-renshushuliang"></use>
+                </svg>
+                现有确诊
+            </span>
+        </li>
+        <li>
+            <h4>{{infoTotal.confirm}}</h4>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yiqingfabu"></use>
+                </svg>
+                累计确诊
+            </span>
+        </li>
+        <li>
+            <h4>{{infoTotal.suspect}}</h4>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-renshu"></use>
+                </svg>
+                现有疑似
+            </span>
+        </li>
+    </script>
+    <!-- 监控区域模板1 -->
+    <script type="text/html" id="monitorFirstTpl">
+        {{each info}}
+        <div class="row">
+            <span class="col">{{$value.province+$value.city}}</span>
+            <span class="col" style="color: orange;">{{$value.nowConfirm}}</span>
+            <span class="col" style="color: blueviolet;">{{$value.confirm}}</span>
+            <span class="icon-dot"></span>
+        </div>
+        {{/each}}
+    </script>
+    <!-- 监控区域模板2 -->
+    <script type="text/html" id="monitorTwoTpl">
+        {{each info}}
+        <div class="row">
+            <span class="col">{{$value.province+$value.city}}</span>
+            <span class="col" style="color: orangered;">{{$value.confirmAdd}}</span>
+            <span class="col" style="color: green">{{$value.heal}}</span>
+            <span class="icon-dot"></span>
+        </div>
+        {{/each}}
+    </script>
+    <!-- 点位分布统计模版 -->
+    <script type="text/html" id="pointTpl">
+        <div class="item">
+            <h4>{{data.nowConfirm}}</h4>
+            <span>
+                现有确诊
+            </span>
+        </div>
+        <div class="item">
+            <h4>{{dataAdd.nowConfirm}}</h4>
+            <span>
+                昨日新增
+            </span>
+        </div>
+    </script>
+    <!-- 用户统计模块模版 -->
+    <script type="text/html" id="usersTpl">
+        <div class="item">
+            <h4>{{data.importedCase}}</h4>
+            <span>
+                累计输入
+            </span>
+        </div>
+        <div class="item">
+            <h4>{{dataAdd.importedCase}}</h4>
+            <span>
+                昨日新增
+            </span>
+        </div>
+    </script>
+    <!-- 订单区域模块模版 -->
+    <script type="text/html" id="orderTpl">
+        <div class="item">
+            {{if index==0}}
+            <h4>{{data.chinaTotal.noInfect}}</h4>
+            {{else if index==1}}
+            <h4>{{data.chinaTotal.nowSevere}}</h4>
+            {{else if index==2}}
+            <h4>{{data.chinaTotal.heal}}</h4>
+            {{else}}
+            <h4>{{data.chinaTotal.dead}}</h4>
+            {{/if}}
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yiqingjiance"></use>
+                </svg>
+                现有
+            </span>
+        </div>
+        <div class="item">
+            {{if index==0}}
+            <h4>{{data.chinaAdd.noInfect}}</h4>
+            {{else if index==1}}
+            <h4>{{data.chinaAdd.nowSevere}}</h4>
+            {{else if index==2}}
+            <h4>{{data.chinaAdd.heal}}</h4>
+            {{else}}
+            <h4>{{data.chinaAdd.dead}}</h4>
+            {{/if}}
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-kangjiyiqing"></use>
+                </svg>
+                较昨日
+            </span>
+        </div>
+    </script>
+    <!-- 销售进度模版 -->
+    <script type="text/html" id="quarterTpl">
+        <div class="item" title="累计接种/亿剂">
+            <h4 style="font-size: .175rem;">
+                {{(data.中国.total_vaccinations / 10000 / 10000).toFixed(2)+"亿"}}</h4>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yiqingfabu"></use>
+                </svg>
+                累计
+            </span>
+        </div>
+        <div class="item" title="较上日新增/万剂">
+            <h4 style="font-size: .175rem;">{{(data.中国.new_vaccinations / 10000).toFixed(2)+"万"}}</h4>
+            <span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-Slice19"></use>
+                </svg>
+                较上日
+            </span>
+        </div>
+    </script>
+    <!-- 全国热销排行模版 -->
+    <script type="text/html" id="gangAoTaiTpl">
+        {{each data}}
+        <li>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-yiqingdizhi"></use>
+            </svg>
+            {{$value.name}} <span style="color: #fff;">{{$value.children[0].total.nowConfirm}}</span>
+        </li>
+        {{/each}}
+    </script>
+    <script src="js/index.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/geo.js"></script>
+    <script src="js/template-web.js"></script>
+    <script src="js/dynamic.js"></script>
+</body>
+
+
+</html>

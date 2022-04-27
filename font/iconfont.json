@@ -1,0 +1,212 @@
+{
+  "id": "3300183",
+  "name": "疫情",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7285927",
+      "name": "人数",
+      "font_class": "renshu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "7478257",
+      "name": "人数",
+      "font_class": "renshu1",
+      "unicode": "e740",
+      "unicode_decimal": 59200
+    },
+    {
+      "icon_id": "9114344",
+      "name": "人数数量",
+      "font_class": "renshushuliang",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "19788437",
+      "name": "人数",
+      "font_class": "renshu2",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "25771006",
+      "name": "中国地图备份",
+      "font_class": "zhongguoditubeifen",
+      "unicode": "e6b3",
+      "unicode_decimal": 59059
+    },
+    {
+      "icon_id": "12959783",
+      "name": "疫情服务",
+      "font_class": "weibiaoti-_huaban",
+      "unicode": "e799",
+      "unicode_decimal": 59289
+    },
+    {
+      "icon_id": "12967655",
+      "name": "疫情监测",
+      "font_class": "yiqingjiance",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "12972220",
+      "name": "疫情大数据",
+      "font_class": "yiqingdashujulogo",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "12976056",
+      "name": "icon_疫情速递",
+      "font_class": "icon_yiqingsudi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12977752",
+      "name": "全国疫情",
+      "font_class": "quanguoyiqing",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "12982809",
+      "name": "疫情物资",
+      "font_class": "yiqingwuzi",
+      "unicode": "e6ed",
+      "unicode_decimal": 59117
+    },
+    {
+      "icon_id": "12995894",
+      "name": "疫情专栏",
+      "font_class": "yiqingfabu",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "13034693",
+      "name": "疫情地图",
+      "font_class": "yiqingditu-",
+      "unicode": "e79e",
+      "unicode_decimal": 59294
+    },
+    {
+      "icon_id": "13040012",
+      "name": "疫情排查",
+      "font_class": "yiqingpaicha",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "13179180",
+      "name": "疫情填报",
+      "font_class": "yiqingtianbao",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "14393075",
+      "name": "疫情科普",
+      "font_class": "yiqingkepu",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "17382008",
+      "name": "疫情统计",
+      "font_class": "yiqingtongji",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "18438532",
+      "name": "疫情管理",
+      "font_class": "yiqingguanli",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
+    },
+    {
+      "icon_id": "18738568",
+      "name": "疫情动态",
+      "font_class": "Slice19",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "19024269",
+      "name": "疫情上报",
+      "font_class": "yiqingshangbao",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
+      "icon_id": "19614459",
+      "name": "疫情",
+      "font_class": "yiqing",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "22349932",
+      "name": "疫情服务",
+      "font_class": "yiqingfuwu",
+      "unicode": "f75f",
+      "unicode_decimal": 63327
+    },
+    {
+      "icon_id": "26278419",
+      "name": "疫情地址",
+      "font_class": "yiqingdizhi",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "26693223",
+      "name": "抗击疫情",
+      "font_class": "kangjiyiqing",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "26936864",
+      "name": "图标-疫情趋势图",
+      "font_class": "tubiao-yiqingqushitu",
+      "unicode": "e722",
+      "unicode_decimal": 59170
+    },
+    {
+      "icon_id": "26950503",
+      "name": "疫情查询",
+      "font_class": "yiqingchaxun",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "28322357",
+      "name": "icon_疫情防控_疫情防控",
+      "font_class": "icon_yiqingfangkong_yiqingfangkong",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "28536637",
+      "name": "疫情-封控区",
+      "font_class": "yiqing-fengkongqu",
+      "unicode": "ec4a",
+      "unicode_decimal": 60490
+    },
+    {
+      "icon_id": "28536640",
+      "name": "疫情-高风险",
+      "font_class": "yiqing-gaofengxian",
+      "unicode": "ec4b",
+      "unicode_decimal": 60491
+    }
+  ]
+}
